@@ -49,7 +49,7 @@ contains
     !
     ! !USES:
     use elm_varctl      , only : iulog
-    use landunit_varcon , only : istcrop, istsoil
+    use landunit_varcon , only : istcrop, istsoil, istwet
     use pftvarcon       , only : gcpsi, pftcc
     use pftvarcon       , only : nc4_grass
     !
@@ -126,7 +126,7 @@ contains
             flx_sed_yld(c)        = 0._r8
 
             ! check landunit type and ground covered by snow/ice
-            if ( lun_pp%itype(l)/=istsoil .and. lun_pp%itype(l)/=istcrop ) then
+            if ( lun_pp%itype(l)/=istsoil .and. lun_pp%itype(l)/=istcrop .and. lun_pp%itype(l)/=istwet ) then
                cycle
             else if (hsnow(c)>0) then
                cycle

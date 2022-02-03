@@ -1127,7 +1127,7 @@ contains
              ! Only examine levels from 1->nlevsoi
              if (j >= 1 .and. j <= nlevsoi) then
                 !             l = clandunit(c)
-                !             if (ityplun(l) /= istwet .AND. ityplun(l) /= istice) then
+                !             if (ityplun(l) /= istice) then
                 ! This could be altered later for allowing this to be over glaciers.
 
                 ! Soil should be saturated in LakeHydrology
